@@ -4,4 +4,6 @@ Bu depo, LiPo paketler için bir batarya yönetim sisteminin (BMS) gereksinimler
 
 İlk araştırma: [BMS işlevleri, mimari seçenekleri ve önceki çalışmalar](docs/01-bms-arastirma.md).
 
-Henüz hedef hücre kimyası, seri/paralel hücre sayısı, akım, şarj cihazı ve mekanik sınırlar belirlenmedi. Bu bilgiler seçilmeden koruma eşikleri ve parça numaraları tasarım kararı sayılmaz.
+Hedef paket 6S LiPo. USB-C PD/GaN adaptörden şarj ve kart üzerinde hücre balanslama için [ön mimari ve güç hesabı](docs/02-6s-usb-c-sarj.md) hazırlandı.
+
+Hücre modeli, paralel düzen, kapasite, izin verilen şarj akımı, yük akımı ve mekanik sınırlar henüz belirlenmedi. Bu bilgiler seçilmeden koruma eşikleri ve parça numaraları tasarım kararı sayılmaz.

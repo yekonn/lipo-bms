@@ -1,6 +1,6 @@
 # LiPo BMS: işlevler, haberleşme ve önceki çalışmalar
 
-Durum: üretici veri sayfaları, uygulama notları, açık tasarımlar ve bir akademik derleme ile desteklenen mimari araştırma. Bu belge bir üretim şeması veya güvenlik onayı değildir.
+Durum: üretici veri sayfaları, uygulama notları, açık tasarımlar ve bir akademik derleme ile desteklenen mimari araştırma. Bu belge bir üretim şeması veya güvenlik onayı değildir. Sonradan belirlenen 6S paket ve USB-C PD ile şarj hedefi [ayrı ön mimari notunda](02-6s-usb-c-sarj.md) ele alınır.
 
 ## 1. BMS nedir?
 
@@ -90,7 +90,7 @@ Güç yolunun kararı yalnız akıma bağlı değildir. Örneğin **hesap örne�
 
 ## 6. Tasarımı başlatmak için eksik girdiler
 
-1. Hücrenin üreticisi/modeli, gerçek kimyası, veri sayfası ve seri/paralel düzeni (S/P).
+1. Hücrenin üreticisi/modeli, gerçek kimyası, veri sayfası ve 6S paket içindeki paralel düzeni (P).
 2. Nominal/en yüksek paket gerilimi; sürekli ve tepe şarj/deşarj akımı ve süreleri.
 3. Şarj cihazı türü, yükün giriş kapasitansı, rejeneratif akım olup olmadığı.
 4. Çalışma/depolama sıcaklığı, mekanik hacim, soğutma ve hücre NTC yerleşimi.

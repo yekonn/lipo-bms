@@ -1,0 +1,15 @@
+blok,ref_islev,adet,secim_mpn,deger,kilif,KiCad_footprint,durum
+PD20,PD_denetcisi,1,STUSB4500QTR,20V_5A_QFN24,QFN24_EP_4x4mm,Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,secildi_sch
+Sarj,U_CH,1,BQ25756RRVR,CC_CV_buck_boost,VQFN36_EP_5x6mm_RRV,Package_DFN_QFN:QFN-36-1EP_5x6mm_P0.5mm_EP3.6x4.6mm,secildi_sch_footprint_dogrulanacak
+Sarj,Q_CH1_Q_CH4,4,SIR680LDP-T1-RE3,80V_N_MOSFET,PowerPAK_SO-8,Package_SO:PowerPAK_SO-8_Single,secildi_sch_pin_map_dogrulanacak
+Sarj,L_CH,1,IHLP6767GZER100M01,10uH_16_5A_EVM_bilgisi,IHLP-6767,Inductor_SMD:L_Vishay_IHLP-6767,secildi_sch_isil_dogrulanacak
+Sarj,R_AC_R_BAT,2,WSL25125L000FEA,5mOhm_1W_1pct,2512,Resistor_SMD:R_2512_6332Metric,secildi_sch_kelvin_dogrulanacak
+Sarj,R_FSW,1,ERJ-6ENF1333V,133kOhm_1pct,0805,Resistor_SMD:R_0805_2012Metric,secildi_sch
+Sarj,R_FB_TOP,1,seri_secilmekte,249kOhm_0_1pct,0805,Resistor_SMD:R_0805_2012Metric,deger_secildi_mpn_acik
+Sarj,R_FB_BOT,1,seri_secilmekte,16_2kOhm_0_1pct,0805,Resistor_SMD:R_0805_2012Metric,deger_secildi_mpn_acik
+Sarj,R_ICHG,1,seri_secilmekte,16_9kOhm_1pct,0603,Resistor_SMD:R_0603_1608Metric,deger_secildi_mpn_acik
+Sarj,R_ILIM,1,seri_secilmekte,4_42kOhm_1pct,0603,Resistor_SMD:R_0603_1608Metric,deger_secildi_mpn_acik
+Sarj,R_AC1_R_AC2_R_AC3,3,seri_secilmekte,1M_6_98k_58kOhm_1pct,0603_0805,Resistor_SMD:R_0603_1608Metric,deger_secildi_mpn_acik
+Sarj,C_REGN_C_DRV_C_VAC_C_BTST_C_SENSE,7,seri_secilmekte,4_7uF_4_7uF_1uF_0_1uFx2_0_47uFx2,MLCC,atanmadi,deger_secildi_mpn_acik
+Sarj,C_IN_C_OUT_bulk_MLCC,hesaplanacak,seri_secilmekte,USB_28V_yuksek_gerilim_derecesi,MLCC_polimer,atanmadi,acik
+Sarj,Sarj_kolu_ters_akim_kesici,1_kanal,secilecek,3A_veya_EPR_4_4A,secilecek,atanmadi,acik

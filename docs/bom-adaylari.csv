@@ -1,0 +1,33 @@
+sayfa,kalem,adet,aday_mpn_veya_aile,durum,gereksinim_ve_secim_kapisi,kaynak
+01_PACK_INPUT,Batarya XT60 giris eslesi,1,XT60 PCB tipi belirlenecek,acik,Referans batarya ucunun cinsiyeti ve 50 A surekli 90 A darbe sicaklik kaniti,Referans paket urun sayfasi
+01_PACK_INPUT,Ana DC sigorta,1,belirlenecek,acik,Bataryaya yakin montaj DC kesme kapasitesi zaman-akim egrisi ve kablo korumasi,02-gereksinimler-ve-on-mimari.md
+01_PACK_INPUT,7 pin JST balans soketi,1,JST seri ve eslesme belirlenecek,acik,B0-B6 sira anahtarlama kutup ve paket harness eslesmesi,Referans paket fiziksel olcum
+01_PACK_INPUT,Hücre tap koruma ve filtre agi,7 kanal,belirlenecek,acik,BQ76942 6S devresi ve tap kopma/kisa testi,TI SLUUC32A ve BQ76942 veri sayfasi
+01_PACK_INPUT,Paket NTC,1-2,103AT-2 ornek,referans,Gercek paket montaji ile AFE esikleri ve NTC acik/kisa teshisi,TI SLUUC32A EVM BOM
+02_CELL_AFE,6S batarya AFE,1,BQ7694202PFBR,secildi_sch,TQFP48 7x7mm I2C CRC REG1 3V3; 6S pin konfig ve paralel FET surus uyumu,TI BQ76942 veri sayfasi ve SLUUBY1
+02_CELL_AFE,Pasif balans dirençleri,6 kanal,belirlenecek,acik,Hucre araligi max balans akimi direnc isisi ve AFE surme limiti,TI BQ76942 veri sayfasi
+02_CELL_AFE,4 uclu ana akim sontu,1,belirlenecek,acik,50 A surekli 90 A 2 s guc/darbe Kelvin ve AFE olcum araligi,02-gereksinimler-ve-on-mimari.md
+02_CELL_AFE,Guc kati sicaklik NTC,2+,103AT-2 ornek,referans,MOSFET PCB indükör noktalari ve kalibrasyon; paket NTC ayri,TI SLUUC32A EVM BOM
+03_LOAD_SWITCH,Yuk kolu MOSFET banki,belirlenecek,belirlenecek,acik,50 A/90 A SOA Rds(on) ters akim tek kisa arizasi termal tasarim,03-kicad-moduller-ve-sema-plani.md
+03_LOAD_SWITCH,Yuk gate surucu ve gate koruma,belirlenecek,belirlenecek,acik,AFE CHG/DSG seviye uyumu varsayilan kapali ve hizli guvenli kesme,TI SLUUBY1
+03_LOAD_SWITCH,PDB on sarj anahtari,1 kanal,belirlenecek,acik,C_in ve kapasitif darbe enerjisi olculmeden deger secilmez,03-kicad-moduller-ve-sema-plani.md
+03_LOAD_SWITCH,PDB on sarj direnci,1 kanal,belirlenecek,acik,E=0.5*C_in*V^2 ve darbe sicaklik/zaman analizi,03-kicad-moduller-ve-sema-plani.md
+03_LOAD_SWITCH,Cikis kondansator desarj/bleed yollari,1 kanal,belirlenecek,acik,Sarj baslangicinda XT60 gerilimini guvenli esige dusurme ve dis geri besleme teshisi,03-kicad-moduller-ve-sema-plani.md
+03_LOAD_SWITCH,PCB XT60 erkek yuk cikisi,1,XT60 PCB erkek modeli belirlenecek,acik,50 A surekli 90 A 2 s pin lehim kablo ve sicaklik kaniti,Kullanici gereksinimi
+03_LOAD_SWITCH,XT60 cikis gerilim algisi,1 kanal,belirlenecek,acik,Yuk cikisi gercekten sokuldu mu ve dis besleme var mi denetimi,03-kicad-moduller-ve-sema-plani.md
+04_PD_INPUT,USB-C sarj soketi,1,belirlenecek,acik,USB-C 5 A yol ve mekanik dayanim kablo/PD uyumu,ST STUSB4500 veri sayfasi
+04_PD_INPUT,USB PD sink denetleyicisi,1,STUSB4500QTR,secildi_sch,QFN24 EP 4x4mm 20V/5A PDO NVM ve kablo/kontrat kontrolu; EPR icin degisir,ST STUSB4500 veri sayfasi ve docs/05-sarj-gucu-secenekleri.md
+04_PD_INPUT,VBUS anahtari/koruma,1 kanal,belirlenecek,acik,PD contract 20 V/5 A dogrulamasi ters akim TVS ESD ve termal,ST STUSB4500 veri sayfasi
+05_CHARGER,6S buck-boost sarj denetleyicisi,1,BQ25756RRVR,secildi_sch,VQFN36 EP 5x6mm 25.2V 3A CC/CV CE ve ters mod engeli,TI BQ25756 veri sayfasi ve docs/04-parca-secimi-ve-sarj-kati.md
+05_CHARGER,4 anahtarli sarj MOSFETleri,4,SIR680LDP-T1-RE3,secildi_sch,PowerPAK SO8 80V; 3A kayip/isi ve 28V EPR senaryosu dogrulanacak,TI SLUUCT7D EVM BOM ve docs/04-parca-secimi-ve-sarj-kati.md
+05_CHARGER,Sarj induktoru,1,IHLP6767GZER100M01,secildi_sch,IHLP6767 10uH; ripple doyma ve isiya gore hesap,TI SLUUCT7D EVM BOM ve docs/04-parca-secimi-ve-sarj-kati.md
+05_CHARGER,Sarj giris/akü akim algisi,2,WSL25125L000FEA,secildi_sch,5mOhm 1W 2512; Kelvin izleri ve sicaklik dogrulanacak,TI SLUUCT7D EVM ve docs/04-parca-secimi-ve-sarj-kati.md
+05_CHARGER,Sarj kolu kesici,1 kanal,belirlenecek,acik,Batarya-USB geri besleme ve AFE asiri gerilim kesmesi,03-kicad-moduller-ve-sema-plani.md
+06_AUX_SUPPLY,Akuden 3V3 regülatör,1,belirlenecek,acik,Tam dolu ve hata transiyenti giris uyumu uyku akimi MCU/USB yuku,03-kicad-moduller-ve-sema-plani.md
+06_AUX_SUPPLY,Yardimci besleme korumasi,1 kanal,belirlenecek,acik,Akü sigorta/filtre ve USB portlarindan geri beslememe,03-kicad-moduller-ve-sema-plani.md
+07_MCU_USB,USB/I2C mikrodenetleyici,1,STM32G0B1CBT6,secildi_sch,LQFP48 7x7mm USB FS I2C SWD ve firmware guc butcesi,ST STM32G0B1 veri sayfasi ve docs/04-parca-secimi-ve-sarj-kati.md
+07_MCU_USB,USB-C veri soketi,1,belirlenecek,acik,USB2 cihaz UFP CC ve Pi host ile veri; VBUS sarj hatti degil,03-kicad-moduller-ve-sema-plani.md
+07_MCU_USB,USB veri ESD ve CC direncleri,1 takim,belirlenecek,acik,USB2 sinyal butunlugu ESD ve UFP standardi,USB Type-C ve MCU veri sayfalari
+07_MCU_USB,SWD hata ayiklama baglantisi,1,belirlenecek,acik,Güvenli programlama erisimi ve hata testi,03-kicad-moduller-ve-sema-plani.md
+08_INTERLOCK_TEST,Donanim kilit mantigi,1 kanal,belirlenecek,acik,Reset MCU kilitlenmesi ve tekil FET arizasinda sarj/yuk ayni anda acilmaz,03-kicad-moduller-ve-sema-plani.md
+08_INTERLOCK_TEST,Düsük akim test noktalari,1 takim,belirlenecek,acik,B0-B6 Kelvin VBUS gate-source 3V3 SWD ve guvenli prob erisimi,03-kicad-moduller-ve-sema-plani.md

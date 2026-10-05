@@ -1,6 +1,8 @@
 # LiPo BMS: işlevler, haberleşme ve önceki çalışmalar
 
-Durum: üretici veri sayfaları, uygulama notları, açık tasarımlar ve bir akademik derleme ile desteklenen mimari araştırma. Bu belge bir üretim şeması veya güvenlik onayı değildir. Sonradan belirlenen 6S paket ve USB-C PD ile şarj hedefi [ayrı ön mimari notunda](02-6s-usb-c-sarj.md) ele alınır.
+Durum: üretici veri sayfaları, uygulama notları, açık tasarımlar ve bir akademik derleme ile desteklenen mimari araştırma. Bu belge bir üretim şeması veya güvenlik onayı değildir.
+
+Projeye özgü 6S1P ve USB-C şarj gereksinimleri için [ön mimari belgesine](02-gereksinimler-ve-on-mimari.md) bakın. Bu belgedeki CAN önerisi genel bir seçenektir; mevcut proje USB haberleşmesini tercih ediyor.
 
 ## 1. BMS nedir?
 
@@ -90,16 +92,16 @@ Güç yolunun kararı yalnız akıma bağlı değildir. Örneğin **hesap örne�
 
 ## 6. Tasarımı başlatmak için eksik girdiler
 
-1. Hücrenin üreticisi/modeli, gerçek kimyası, veri sayfası ve 6S paket içindeki paralel düzeni (P).
+1. Hücrenin üreticisi/modeli, gerçek kimyası, veri sayfası ve seri/paralel düzeni (S/P).
 2. Nominal/en yüksek paket gerilimi; sürekli ve tepe şarj/deşarj akımı ve süreleri.
 3. Şarj cihazı türü, yükün giriş kapasitansı, rejeneratif akım olup olmadığı.
 4. Çalışma/depolama sıcaklığı, mekanik hacim, soğutma ve hücre NTC yerleşimi.
 5. Ana bilgisayarın var olan haberleşme hattı, kablo uzunluğu ve güvenlik/izolasyon gereksinimi.
 6. Bekleme akımı hedefi, servis/ürün kullanım senaryosu ve doğrulanacak standartlar.
 
-## 7. Altium ve LTspice için sonraki adımlar
+## 7. KiCad ve LTspice için sonraki adımlar
 
-Gereksinimler kesinleşince Altium'da hücre tap/filtre, AFE, MCU, akım algılama, güç kesici, besleme, sıcaklık, haberleşme ve konnektörler ayrı şema sayfaları olarak çizilmeli. PCB'de yüksek akım döngüsü, Kelvin şönt ölçümü, analog referans ve anahtarlama akımları, hücre tap koruması, ısı yayılımı ve gerekli açıklık/izolasyon mesafeleri gözden geçirilmeli.
+Gereksinimler kesinleşince KiCad'de hücre tap/filtre, AFE, MCU, akım algılama, güç kesici, besleme, sıcaklık, haberleşme ve konnektörler ayrı şema sayfaları olarak çizilmeli. PCB'de yüksek akım döngüsü, Kelvin şönt ölçümü, analog referans ve anahtarlama akımları, hücre tap koruması, ısı yayılımı ve gerekli açıklık/izolasyon mesafeleri gözden geçirilmeli. Sayfa sırası ve modül gereksinimleri [ayrı planda](03-kicad-moduller-ve-sema-plani.md).
 
 LTspice çalışmaları için ilk test matrisi: (1) en düşük/nominal/en yüksek hücre geriliminde giriş filtrelerinin kararlılığı ve tap kopması; (2) MOSFET açma/kapama, kısa devre ve ön şarj anındaki gerilim/akım ile SOA karşılaştırması; (3) şönt ve pasif dengeleme direnci güçleri; (4) NTC açık/kısa durumlarında algılama; (5) besleme ve yük geçişleri. Modeller hücre veri sayfası veya ölçümünden türetilmelidir. Tam AFE modeli bulunacağı varsayılmamalı; gerekiyorsa AFE kararları davranışsal blokla temsil edilip bu sınır raporlanmalı. Simülasyon, hücre veri sayfası incelemesi ve fiziksel hata enjeksiyonlu prototip testinin yerine geçmez.
 
